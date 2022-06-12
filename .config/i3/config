@@ -1,0 +1,52 @@
+ 49 # A mode for changing the gap-size
+ 48 bindsym $mod+g mode "gaps"
+ 47
+ 46 mode "gaps" {
+ 45         bindsym o      mode "gaps_outer"
+ 44         bindsym i      mode "gaps_inner"
+ 43         bindsym Return mode "default"
+ 42         bindsym Escape mode "default"
+ 41 }
+ 40
+ 39 mode "gaps_inner" {
+ 38         bindsym plus  gaps inner current plus 5
+ 37         bindsym minus gaps inner current minus 5
+ 36         bindsym 0     gaps inner current set 0
+ 35
+ 34         bindsym Shift+plus  gaps inner all plus 5
+ 33         bindsym Shift+minus gaps inner all minus 5
+ 32         bindsym Shift+0     gaps inner all set 0
+ 31
+ 30         bindsym Return mode "default"
+ 29         bindsym Escape mode "default"
+ 28     bindsym o mode "gaps_outer"
+ 27 }
+ 26
+ 25 mode "gaps_outer" {
+ 24         bindsym plus  gaps outer current plus 5
+ 23         bindsym minus gaps outer current minus 5
+ 22         bindsym 0     gaps outer current set 0
+ 21
+ 20         bindsym Shift+plus  gaps outer all plus 5
+ 19         bindsym Shift+minus gaps outer all minus 5
+ 18         bindsym Shift+0     gaps outer all set 0
+ 17
+ 16         bindsym Return mode "default"
+ 15         bindsym Escape mode "default"
+ 14     bindsym i mode "gaps_inner"
+ 13 }
+ 12
+ 11 # Screenshots
+ 10 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+  9 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(dat
+    e)"
+  8 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+  7
+  6 # Clipboard Screenshots
+  5 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+  4 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection cli
+    pboard -t image/png
+  3 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+  2
+  1 # Bar
+244 exec_always ./.config/polybar/launch.sh
