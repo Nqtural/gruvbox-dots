@@ -1,0 +1,17 @@
+set home-page=file:///home/nqtural/Coding/html/firefox-start/index.html
+set editor-command=alacritty -e "vim %s"
+set cookie-accept=origin
+set dark-mode=true
+set input-autohide=true
+set webgl=true
+
+
+
+set completion-css=color:#ebdbb2;background-color:#282828;font:10pt DejaVu Sans Mono;
+set completion-hover-css=color:#ebdbb2;background-color:#1d2021;font:10pt DejaVu Sans Mono;
+set completion-selected-css=color:#ebdbb2;background-color:#a89984;font:10pt DejaVu Sans Mono;
+set input-css=color:#ebdbb2;background-color:#282828;font:10pt DejaVu Sans Mono;
+set input-error-css=color:#282828;background-color:#fb4934;font:10pt DejaVu Sans Mono;
+set status-css=color:#ebdbb2;background-color:#458588;font:10pt DejaVu Sans Mono;
+set status-ssl-css=color:#ebdbb2;background-color:#282828;font:10pt DejaVu Sans Mono;
+set status-ssl-invalid-css=color:#282828;background-color:#fb4934;font:10pt DejaVu Sans Mono;
